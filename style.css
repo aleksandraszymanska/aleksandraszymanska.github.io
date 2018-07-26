@@ -1,0 +1,387 @@
+@import
+url('https://fonts.googleapis.com/css?family=Montserrat:100,300,400,700');
+
+*{
+    box-sizing: border-box;
+    transition: all ease-in-out 300ms;
+
+}
+body{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif; 
+    text-align: center;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+.container{
+    width:100%;
+    max-width: 60em;
+    margin: 0 auto;
+   
+   
+}
+.clearfix::after,
+section::after,
+footer::after{
+content:'';
+display: block;
+clear: both;
+}
+/* column system*/
+[class^=column-]{
+    width: 100%;
+margin-top:.05em;
+}
+.col-1{
+    width: 25%;
+    float: right;
+    padding-bottom: .5rem;
+}
+
+@media(min-width: 60rem){
+    [class^=column-]{
+        float: left;
+        padding: 2em, 1em;
+        margin-top:2em;
+
+    }
+.column-3{
+width: 50%;
+font-size: 1rem;
+padding-bottom: .5rem;
+}
+.column-1{
+width: 16.6666%;
+}
+}
+
+
+/*typography*/
+h1{
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin-top: 0;
+}
+p{
+    margin: 0;
+    line-height: 1.5;
+}
+p:last-of-type{
+    margin-bottom: 0;
+}
+.title{
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: .9em;
+    margin-top:.9em;
+}
+.title span{
+    font-weight: 3; 
+    font-size: 0.9em;
+    
+}
+.unstyled-list{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+@media(min-width: 60rem){ /*dzieki temu ustawiamy, ze takie rozmary jak podane ponizej beda dla
+    ekranow nie mniejszych niz 55rem (czyli 55*16= x PX -GENIALNE*/
+    .title{
+        font-size: 4rem;
+    }
+
+}
+/* buttons */
+.button{
+    display: inline-block;/* zabezpeicza zeby napis nie spadl na guzik*/
+    font-size: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-width: 2px;
+    border-style: solid;
+    padding: .5em 1.75em;
+    color:#FFF;
+
+}
+.button-back{
+    font-size: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1em 1em;
+    color:#FFF;
+    border-width: 2px;
+    border-style: solid;
+    
+    
+    
+
+}
+
+.button-accent:hover,
+.button-accent:focus{
+    background:#FFF;
+    color:black;
+}
+@media(min-width:60rem){
+    .button{
+        font-size: 1.5rem;  
+        font-weight: 700;
+    }
+}
+
+.button-small{
+    font-size: 1rem;
+}
+
+
+.button-accent :hover,
+.button-accent :focus{
+    background:pink;
+    color:black;
+}
+
+
+
+
+/* header*/
+
+header{
+   position: absolute;
+   left:0;
+   right:0;
+   margin: 1em;
+}
+nav ul{
+margin: 0;
+padding: 0;
+list-style: none; /* nie ma dzieki temu tych kropek :) */
+}
+nav li{
+display: inline-block; /* dzieki temu lista jest pozioma nie pionowa*/
+ /* ile sa od siebie odsuniete margin: 0.5em;*/
+}
+nav a {
+font-weight: 900;
+text-decoration: none;
+text-transform: uppercase;
+font-size: 1.2em;
+padding: .5em;
+
+  /* that is so fukcing smart! dzieki paddingowi klikalnie jest wiecej miejsca
+a co za tym idzie ktos na urzardzeniu mobilnym nie musi wcelowac dokladnie w to!*/
+/* background:pink; tylko do widoczosci paddingu*/
+columns: #232323;;
+}
+
+@media(min-width: 60rem){ 
+    .logo{
+        float: left;
+    }
+    .home-link{
+        float: right;
+    }
+}
+
+/* home head*/
+.home-head{
+    background-image:
+    url(images/background.JPG);
+    background-size: cover;
+    background-position: center;
+    padding:10em 0;
+    color:#FFF;
+    background-attachment: fixed;
+}
+@media(min-width: 60rem){
+    .home-head{
+        height: 100vh;
+        padding-top: 40vh;/*vh to vievpoint height*/
+
+    }
+}
+/*home about*/
+
+.home-about-textbox{
+    background-color:#232323;
+    padding: 3em;
+    width:100vw;
+    outline: 2px solid #FFF;/* prawie jak border ale fajniejsze*/
+    outline-offset: -2.5em;
+    color:#FFF;
+    position: relative;
+}
+.home-about-textbox h1{
+    color:#FFF ;
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%); /* trik dzieki ktoremu centrujemy przy absolute */
+    top: .75em;
+    background: #232323;
+    padding: 0, 1em;
+}
+@media(min-width:25rem ){
+    h1{
+font-size: 2rem;
+    }
+    .home-about-textbox h1{
+        top:.6rem;
+        padding: 0, 0.5em;
+    }
+}
+@media(min-width:60rem ){
+    h1{
+font-size: 2.5rem;
+    }
+    .home-about{
+      
+        padding-bottom: 1rem;
+    }
+    .home-about-textbox{
+        
+        width:35vw;
+        padding: 7em;
+        outline-offset: -2.5em;
+        margin-left: -3.75em;
+        top:-4em;
+        text-align:left;
+        box-shadow: 0 0 3em 0 rgba(0,0,0,.3); /*cien dodaje wokol*/
+       
+    }
+    .home-about-textbox h1{
+        top:.6rem;
+        left:3.5rem;
+        transform: translateX(0);
+       
+    }
+    
+}
+/**edu**/
+
+.edu-about-textbox{
+    background-color:#232323;
+    padding: 3em;
+    width:100vw;
+    outline: 2px solid #FFF;/* prawie jak border ale fajniejsze*/
+    outline-offset: -2.5em;
+    color:#FFF;
+    position: relative;
+}
+.edu-about-textbox h1{
+    color:#FFF ;
+    position: absolute;
+    right:50%;
+    transform: translateX(50%); /* trik dzieki ktoremu centrujemy przy absolut e */
+    top: .75em;
+    background: #232323;
+    padding: 0, 1em;
+}
+@media(min-width:25rem ){
+    h1{
+font-size: 2rem;
+    }
+    .edu-about-textbox h1{
+        top:.6rem;
+        padding: 0, 0.5em;
+    }
+}
+@media(min-width:60rem ){
+    h1{
+font-size: 2.5rem;
+    }
+    .edu-about{
+        background-image: 
+        url();
+        background-repeat: no-repeat;
+        
+        
+    }
+    .edu-about-textbox{
+        
+        width:35vw;
+        padding: 7em;
+        outline-offset: -2.5em;
+        float: right;
+        margin-right: -3.75em;
+        top:-4em;
+        text-align:right;
+        box-shadow: 0 0 3em 0 rgba(0,0,0,.3); /*cien dodaje wokol*/
+    }
+    .edu-about-textbox h1{
+        top:.6rem;
+        right:3.5rem;
+        transform: translateX(0);
+       
+    }
+    
+}
+
+
+
+/**portfolio**/
+#portofolio{
+    margin:0 3rem;
+    padding: 3rem 0;
+}
+
+
+.portfolio-item{
+    position: relative;
+    margin:0;
+    padding: 2rem;
+   
+}
+.portfolio-description{
+    position: absolute;
+    z-index: 100;
+    bottom:2em;
+    left: 0em;;
+    right:0em;
+    color:white;
+    background: rgba(0,0,0,.6);
+    padding-bottom: 2em;
+}
+.portfolio-description p{
+    margin: 1em;
+}
+.portfolio-item img{
+    display: block;
+}
+
+@media(min-width:60rem){
+    .portfolio-item{
+        width: 33.3333334%;
+        float:left;
+        overflow: hidden;
+       
+        
+    }
+    .portfolio-description{
+        transform:translateY(150%);
+    }
+    .portfolio-item:hover .portfolio-description{
+        transform: translateY(0%);
+    }
+
+}
+/**CTA**/
+.cta{
+    background-color:#232323;
+    color:white;
+    padding: 4em 0;
+}
+/**footer**/
+footer{
+    background:#232323;
+    color:#fff;
+    text-align: center;
+}
+@media(min-width:60rem){
+    footer{
+        text-align:left;
+        
+    }
+}
