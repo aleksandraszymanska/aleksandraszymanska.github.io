@@ -30,6 +30,7 @@ display: block;
 clear: both;
 }
 /* column system*/
+
 [class^=column-]{
     width: 100%;
 margin-top:.05em;
@@ -88,8 +89,7 @@ p:last-of-type{
     list-style-type: none;
 }
 
-@media(min-width: 60rem){ /*dzieki temu ustawiamy, ze takie rozmary jak podane ponizej beda dla
-    ekranow nie mniejszych niz 55rem (czyli 55*16= x PX -GENIALNE*/
+@media(min-width: 60rem){ 
     .title{
         font-size: 4rem;
     }
@@ -97,7 +97,7 @@ p:last-of-type{
 }
 /* buttons */
 .button{
-    display: inline-block;/* zabezpeicza zeby napis nie spadl na guzik*/
+    display: inline-block;
     font-size: 1rem;
     text-decoration: none;
     text-transform: uppercase;
@@ -158,11 +158,10 @@ header{
 nav ul{
 margin: 0;
 padding: 0;
-list-style: none; /* nie ma dzieki temu tych kropek :) */
+list-style: none; 
 }
 nav li{
-display: inline-block; /* dzieki temu lista jest pozioma nie pionowa*/
- /* ile sa od siebie odsuniete margin: 0.5em;*/
+display: inline-block; 
 }
 nav a {
 font-weight: 900;
@@ -171,9 +170,6 @@ text-transform: uppercase;
 font-size: 1.2em;
 padding: .5em;
 
-  /* that is so fukcing smart! dzieki paddingowi klikalnie jest wiecej miejsca
-a co za tym idzie ktos na urzardzeniu mobilnym nie musi wcelowac dokladnie w to!*/
-/* background:pink; tylko do widoczosci paddingu*/
 columns: #232323;;
 }
 
@@ -207,7 +203,7 @@ columns: #232323;;
 
 .home-about-textbox{
     background-color:#232323;
-    padding: 3em;
+    padding: 4em;
     width:100vw;
     outline: 2px solid #FFF;/* prawie jak border ale fajniejsze*/
     outline-offset: -2.5em;
@@ -219,13 +215,14 @@ columns: #232323;;
     position: absolute;
     left:50%;
     transform: translateX(-50%); /* trik dzieki ktoremu centrujemy przy absolute */
-    top: .75em;
+    top: .8em;
     background: #232323;
-    padding: 0, 1em;
+    padding: 1em, 1em;
+    margin-bottom: .5rem;
 }
 @media(min-width:25rem ){
     h1{
-font-size: 2rem;
+font-size: 1.5rem;
     }
     .home-about-textbox h1{
         top:.6rem;
@@ -263,7 +260,7 @@ font-size: 2.5rem;
 
 .edu-about-textbox{
     background-color:#232323;
-    padding: 3em;
+    padding: 4em;
     width:100vw;
     outline: 2px solid #FFF;/* prawie jak border ale fajniejsze*/
     outline-offset: -2.5em;
@@ -342,7 +339,7 @@ font-size: 2.5rem;
     right:0em;
     color:white;
     background: rgba(0,0,0,.6);
-    padding-bottom: 2em;
+    
 }
 .portfolio-description p{
     margin: 1em;
@@ -371,13 +368,14 @@ font-size: 2.5rem;
 .cta{
     background-color:#232323;
     color:white;
-    padding: 4em 0;
+    padding: 2em 0;
 }
 /**footer**/
 footer{
     background:#232323;
     color:#fff;
     text-align: center;
+    padding: 2.5em;
 }
 @media(min-width:60rem){
     footer{
